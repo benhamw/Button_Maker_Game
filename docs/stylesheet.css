@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --light: #ddd;
+  --dark: #333;
+}
+
+body {
+  background-color: #ffb;
+}
+
+h1 {
+  color: #65654d;
+  text-shadow: 3px 2px 5px rgb(92, 89, 89);
+  font-size: xx-large;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+
+h2 {
+  color: #444334;
+  text-shadow: 2px 2px 2px #ffffec;
+  text-align: center;
+  font-size: 18pt;
+  margin-bottom: 0px;
+  margin-top: 1px;
+}
+
+h3 {
+  color: #65654d;
+  text-shadow: 2px 2px 5px rgb(177, 174, 174);
+  text-align: center;
+  margin-top: 1px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: #65654d;
+  width: 100%;
+  position: relative;
+}
+
+.collapsibleNavBar {
+  background-color: #65654d;
+  color: #ffb;
+  cursor: pointer;
+  padding: 10px;
+  width: 33%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 13px;
+  position: relative;
+}
+
+.active,
+.collapsibleNavBar:hover {
+  background-color: #444334;
+}
+
+.content {
+  padding: 0 15px 0px 15px;
+  display: none;
+  background-color: #bbbbff;
+  top: 100%;
+  width: 97.8%;
+  font-size: 14px;
+}
+
+.button {
+  display: flex;
+  width: 30%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: -10px;
+  text-decoration: none;
+  border: 0px;
+  outline: none;
+  border-width: 0px;
+  outline-width: 0px;
+  border-bottom: none;
+  background-color: #ffb;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #ffb;
+}
+
+.other-button {
+  display: flex;
+  width: 50%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: #bbbbff;
+}
+
+.other-button:hover {
+	cursor: pointer;
+	background: #d6d69e;
+  }
+  
+
+.rotate {
+  animation: rotation 8s infinite linear;
+}
+
+.upgrades {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 11px;
+}
+
+.auto-clicker-upgrade {
+  width: 200px;
+}
+
+.price {
+  color: #65654d;
+  text-shadow: 2px 2px 5px rgb(177, 174, 174);
+  text-align: center;
+  font-size: 15pt;
+  margin-top: 5px;
+  margin-bottom: -5px;
+}
+
+#reset-button {
+  display: flex;
+  width: 8%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 10px;
+  padding: 12px;
+  min-width: 30px;
+  height: 35px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    max-width: 600px;
+    height: auto;
+    transform: scale(0.8);
+    font-size: scale(0.5);
+  }
+  .content {
+    width: 93%;
+  }
+  #reset-game-button {
+    width: 20%;
+  }
+}

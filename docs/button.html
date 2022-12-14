@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Button Maker</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <header>
+        <nav>
+            <button type="button" id="aboutBtn" class="collapsibleNavBar" onclick="aboutButton()">About</button>
+                <div id="about" class="content" style="display: none;">
+                    <p>Fred of Fred's Donut Company has been making hot, fresh donuts for the last 60 years. Fred was ready to retire and wanted something to remember his donut making days by.  He came up with the idea of a game
+                        that would let himself, and others, continue making his hot, fresh donuts in a virtual factory.  So he contacted his buddy Joe. Joe was a retired programmer that started his career just as the IBM S/360's
+                        started to be delivered.  Fred explained to Joe how he wanted a game where you clicked a button to increase your count of donuts, and there were other buttons that let you buy things that increased your count.
+                        What Joe, who was getting up there, heard was "Buttons".  He was quite proud when he delivered his virtual Button Making game to Fred.  Fred just looked fondly at his friend, smiled and said, "That's great, Joe.
+                        Let's play."</p>
+                </div>
+            <button type="button" id="inspirationBtn" class="collapsibleNavBar" onclick="inspirationButton()">Inspiration</button>
+                <div id="inspiration" class="content" style="display: none;">
+                    <p><del>Donut</del> Button Maker was inspired by the game, <a href="https://orteil.dashnet.org/cookieclicker/" target="_blank">Cookie Clicker</a>. Cookie Clicker is a Javascript game that was released by Orteil in 2013. The goal of the game is to make cookies by clicking on the cookie. Once you earn enough cookies, you can buy upgrades to help you make cookies faster. Cookie Clicker allows the user to have gameplay experience that appears to be endless. </p>
+                </div>
+            <button type="button" id="contactBtn" class="collapsibleNavBar" onclick="contactButton()">Contact</button>
+                <div id="contact" class="content" style="display: none;">
+                    <p>William Benham: Software Engineer
+                        <ul>
+                            <li><a href="https://github.com/benhamw" target="_blank">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/william-benham-505nm/" target="_blank">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+        </nav>
+    </header>
+    <body>
+        <h1><del>Donut</del> Button Maker</h1>
+        <h3>Welcome to Fred's <del>Donut</del> Button Company. Time to make the <del>Donuts</del> Buttons!</h3>
+        <button onclick="addButtons()" class="button" ><img src="button.png" class="rotate"></button>
+        <h1><span id="button-count">0</span> Buttons</h1>
+        <div class="upgrades">
+            <div class="auto-clicker-upgrade">
+                <h3>Auto Clicker Cost</h3>
+                <h2><span id="auto-clicker-cost">100</span> Buttons</h2>
+                <button id="auto-clicker" onclick="addAutoClickers()" type="button" class="other-button">Buy Auto Clicker</button>
+                <h3 class="price">Auto Clickers:</h3>
+                <h2><span id="auto-clicker-count">0</span></h2>
+            </div>
+            <div class="click-multiplier-upgrade">
+                <h3 class="price">Click Multiplier Cost</h3>
+                <h2><span id="multiplier-cost">10</span> Buttons</h2>
+                <button id="multiplier" onclick="addButtonMultiplier()" type="button" class="other-button">Buy Button Multiplier</button>
+                <h3 class="price">Multipliers:</h3>
+                <h2><span id="multiplier-count">0</span></h2>
+            </div>
+        </div>
+        <h3 class="price">Buttons per Click</h3>
+        <h2><span id="buttons-per-click">1</span></h2>
+        <h2 id="message"> </h2>
+        <button onclick="reset()" id="reset-button" type="button" class="other-button">Reset Game</button>
+        <script src="button.js"></script>
+    </body>
+</html>
